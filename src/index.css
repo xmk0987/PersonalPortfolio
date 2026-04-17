@@ -95,6 +95,12 @@
   --border-width: 1px;
   --border-base: var(--border-width) solid var(--color-border);
 
+  /* Breakpoints */
+  --breakpoint-phone-tablet: 640px;
+  --breakpoint-tablet-desktop: 960px;
+  --breakpoint-desktop: 1200px;
+  --breakpoint-desktop-wide: 1440px;
+
   /* Shadows */
   --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.18);
   --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.22);
@@ -120,7 +126,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media (max-width: 1024px) {
+/* tabletDesktop */
+@media (max-width: 960px) {
   :root {
     --header-height: 64px;
     --padding-section-y: var(--space-12);
@@ -128,7 +135,8 @@
   }
 }
 
-@media (max-width: 768px) {
+/* phoneTablet */
+@media (max-width: 640px) {
   :root {
     --header-height: 64px;
     --page-padding-x: 16px;
