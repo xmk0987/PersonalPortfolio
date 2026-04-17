@@ -1,0 +1,15 @@
+.appShell {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  overflow: hidden;
+  background: var(--color-bg);
+}
+
+.appContent {
+  height: 100svh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-top: var(--header-height);
+  scroll-behavior: smooth;
+}

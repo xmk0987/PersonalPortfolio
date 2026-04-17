@@ -1,121 +1,67 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { useEffect, useRef, useState } from "react";
+import Header from "./sections/Header/Header";
+import Hero from "./sections/Hero/Hero";
+import Projects from "./sections/Projects/Projects";
+import Experience from "./sections/Experience/Experience";
+import Skills from "./sections/Skills/Skills";
+import Education from "./sections/Education/Education";
+import About from "./sections/About/About";
+
+import "./App.css";
+import styles from "./AppShell.module.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+  const lastScrollTopRef = useRef(0);
+  const [isHeaderHidden, setIsHeaderHidden] = useState(false);
+
+  useEffect(() => {
+    const element = scrollRef.current;
+
+    if (!element) {
+      return;
+    }
+
+    /**
+     * Hides the header when scrolling down and shows it when scrolling up.
+     */
+    function handleScroll(): void {
+      if (!element) return;
+
+      const currentScrollTop = element.scrollTop;
+      const previousScrollTop = lastScrollTopRef.current;
+
+      if (currentScrollTop <= 24) {
+        setIsHeaderHidden(false);
+        lastScrollTopRef.current = currentScrollTop;
+        return;
+      }
+
+      setIsHeaderHidden(currentScrollTop > previousScrollTop);
+      lastScrollTopRef.current = currentScrollTop;
+    }
+
+    element.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      element.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <div className={styles["appShell"]}>
+      <Header isHidden={isHeaderHidden} />
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+      <div ref={scrollRef} className={styles["appContent"]}>
+        <Hero />
+        <Projects />
+        <Experience />
+        <Skills />
+        <Education />
+        <About />
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;

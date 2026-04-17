@@ -1,0 +1,28 @@
+.heroSection {
+  background: var(--color-bg);
+}
+
+.content {
+  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-lg);
+}
+
+.eyebrow {
+  color: var(--color-accent);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.title {
+  color: var(--color-text-primary);
+}
+
+.description {
+  max-width: 60ch;
+  font-size: var(--font-size-md);
+  color: var(--color-text-secondary);
+}

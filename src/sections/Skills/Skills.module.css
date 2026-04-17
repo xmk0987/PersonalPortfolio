@@ -1,0 +1,9 @@
+.section {
+  background: var(--color-bg);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+}

@@ -1,0 +1,16 @@
+.pageSection {
+  width: 100%;
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--padding-section-y) var(--padding-section-x);
+  display: flex;
+  align-items: center;
+}
+
+.fullHeight {
+  min-height: calc(100svh - var(--header-height));
+}
+
+.inner {
+  width: min(100%, var(--container-width));
+  margin: 0 auto;
+}
