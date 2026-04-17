@@ -1,0 +1,37 @@
+.socialLinks {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-md);
+  flex-wrap: wrap;
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gap-sm);
+  min-height: 44px;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  background: var(--color-foreground);
+  color: var(--color-text-primary);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform var(--transition-fast),
+    border-color var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+.socialLink:hover {
+  border-color: var(--color-accent);
+  background: rgba(var(--color-accent-rgb), 0.08);
+}
+
+.socialLink:active {
+  transform: translateY(1px);
+}
+
+.socialLinkIcon {
+  flex-shrink: 0;
+  color: var(--color-text-primary);
+}
