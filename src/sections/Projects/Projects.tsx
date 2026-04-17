@@ -6,7 +6,8 @@ const Projects: React.FC = () => {
     <PageSection id={"projects"} fullHeight className={styles.projectSection}>
       <div className={styles.layout}>
         <div className={styles.content}>
-          <p className={styles.label}>Projects</p>
+          <h2>Projects</h2>
+          <p>Project preview</p>
         </div>
 
         <div className={styles.preview}>Project preview</div>

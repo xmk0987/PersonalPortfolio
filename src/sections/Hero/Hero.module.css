@@ -2,11 +2,17 @@
   background: var(--color-bg);
 }
 
+.layout {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
 .content {
   max-width: 760px;
   display: flex;
   flex-direction: column;
-  gap: var(--gap-lg);
+  gap: var(--gap-md);
 }
 
 .eyebrow {
@@ -19,10 +25,25 @@
 
 .title {
   color: var(--color-text-primary);
+  max-width: 12ch;
 }
 
 .description {
   max-width: 60ch;
   font-size: var(--font-size-md);
   color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xl);
+  margin-top: var(--space-lg);
+}
+
+@media (max-width: 639px) {
+  .description {
+    font-size: var(--font-size-base);
+  }
 }

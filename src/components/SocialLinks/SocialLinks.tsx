@@ -26,8 +26,7 @@ const SocialLinks: React.FC = () => {
           aria-label={label}
           className={styles.socialLink}
         >
-          <Icon size={20} className={styles.socialLinkIcon} />
-          <span>{label}</span>
+          <Icon size={30} className={styles.socialLinkIcon} />
         </a>
       ))}
     </div>
