@@ -52,20 +52,6 @@ npm run dev
 
 After that, open the local URL shown in the terminal.
 
-## Build for Production
-
-To create a production build:
-
-```
-npm run build
-```
-
-To preview the production build locally:
-
-```
-npm run preview
-```
-
 ## Project Purpose
 
 This project is a personal portfolio website created to present my work, technical skills, and professional background.
