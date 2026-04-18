@@ -1,6 +1,7 @@
 import { GitHubIcon, LinkedInIcon } from "../../assets/icons";
 import styles from "./SocialLinks.module.css";
 
+// TODO UPDATE TO REAL LINKS
 const SOCIAL_LINKS = [
   {
     label: "GitHub",
@@ -14,10 +15,20 @@ const SOCIAL_LINKS = [
   },
 ] as const;
 
-const SocialLinks: React.FC = () => {
+type SocialLinkLabel = (typeof SOCIAL_LINKS)[number]["label"];
+
+interface SocialLinksProps {
+  visibleLabels?: readonly SocialLinkLabel[];
+}
+
+const SocialLinks: React.FC<SocialLinksProps> = ({ visibleLabels }) => {
+  const filteredLinks = visibleLabels
+    ? SOCIAL_LINKS.filter((link) => visibleLabels.includes(link.label))
+    : SOCIAL_LINKS;
+
   return (
     <div className={styles.socialLinks} aria-label="Social media links">
-      {SOCIAL_LINKS.map(({ label, href, Icon }) => (
+      {filteredLinks.map(({ label, href, Icon }) => (
         <a
           key={label}
           href={href}

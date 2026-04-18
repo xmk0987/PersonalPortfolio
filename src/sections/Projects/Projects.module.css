@@ -2,55 +2,16 @@
   background: var(--color-bg);
 }
 
-.layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--gap-2xl);
-  align-items: center;
-}
-
-.content {
+.sectionInner {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-md);
+  gap: var(--space-xl);
+  width: 100%;
 }
 
-.label {
-  color: var(--color-accent);
-  font-size: var(--font-size-sm);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.title {
-  color: var(--color-text-primary);
-}
-
-.description {
-  color: var(--color-text-secondary);
-  max-width: 56ch;
-}
-
-.preview {
-  min-height: 360px;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-xl);
-  background: var(--color-foreground);
-  box-shadow: var(--shadow-sm);
+.header {
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: var(--color-text-muted);
-}
-
-/* tabletDesktop */
-@media (max-width: 960px) {
-  .layout {
-    grid-template-columns: 1fr;
-  }
-
-  .preview {
-    min-height: 240px;
-  }
+  justify-content: space-between;
+  gap: var(--space-md);
 }

@@ -25,7 +25,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--gap-lg);
+  gap: var(--space-lg);
 }
 
 .site-header__logo {
@@ -39,7 +39,7 @@
 .site-header__nav {
   display: flex;
   align-items: center;
-  gap: var(--gap-xl);
+  gap: var(--space-xl);
 }
 
 .site-header__nav a {

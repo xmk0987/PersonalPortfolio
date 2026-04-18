@@ -12,7 +12,7 @@
   max-width: 760px;
   display: flex;
   flex-direction: column;
-  gap: var(--gap-md);
+  gap: var(--space-md);
 }
 
 .eyebrow {
@@ -38,7 +38,7 @@
 .bottom {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-xl);
+  gap: var(--space-xl);
   margin-top: var(--space-lg);
 }
 
