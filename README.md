@@ -1,73 +1,79 @@
-# React + TypeScript + Vite
+# Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains my personal portfolio website.
 
-Currently, two official plugins are available:
+The site is designed to present my background, experience, projects, skills, and other relevant information in a clean and accessible format.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Live site: **vitikainenonni.com**
 
-## React Compiler
+## About
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This portfolio serves as a central place to showcase:
 
-## Expanding the ESLint configuration
+- selected software projects
+- work experience
+- education
+- technical skills
+- a short personal introduction
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+The goal of the project is to provide a simple and professional overview of my work and background as a full stack developer.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+This project is built with:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- React
+- TypeScript
+- Vite
+- CSS Modules
+
+## Running Locally
+
+To run the project locally:
+
+### 1. Clone the repository
+
+```
+git clone <your-repository-url>
+cd <your-project-folder>
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Install dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+npm install
+```
+
+### 3. Start the development server
+
+```
+npm run dev
+```
+
+After that, open the local URL shown in the terminal.
+
+## Build for Production
+
+To create a production build:
+
+```
+npm run build
+```
+
+To preview the production build locally:
+
+```
+npm run preview
+```
+
+## Project Purpose
+
+This project is a personal portfolio website created to present my work, technical skills, and professional background.
+
+It also acts as a place where I can continue refining my frontend development, design decisions, and overall presentation as my experience grows.
+
+## Contact
+
+If you would like to learn more, feel free to visit the live site:
+
+**vitikainenonni.com**
