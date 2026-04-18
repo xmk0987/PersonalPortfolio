@@ -1,71 +1,51 @@
 import { useMemo, useState } from "react";
 import PageSection from "../../layout/PageSection";
-import ExperienceCard from "./ExperienceCard/ExperienceCard";
+import ResumeEntryCard, {
+  type ResumeEntryCardProps,
+} from "../../components/ResumeEntryCard/ResumeEntryCard";
 import styles from "./Experience.module.css";
 
-interface JobItem {
-  date: string;
-  jobTitle: string;
-  company: string;
-  description: string;
-  skills: readonly string[];
-  isHidden?: boolean;
-}
-
-const JOBS: readonly JobItem[] = [
+const JOBS: readonly ResumeEntryCardProps[] = [
   {
-    date: "1.5.2025 – Present",
-    jobTitle: "Full Stack Developer",
-    company: "Bitwise Oy - Tampere",
+    date: "1.5.2025 - Present",
+    title: "Full Stack Developer",
+    organization: "Bitwise Oy - Tampere",
     description:
       "Maintaining and improving customer applications through bug fixes, feature development, client discussions, and technical consulting.",
-    skills: [
-      "Angular",
-      "TypeScript",
-      "Scala",
-      "Java",
-      "PostgreSQL",
-    ],
+    tags: ["Angular", "TypeScript", "Scala", "Java", "PostgreSQL"],
   },
   {
-    date: "12.2024 – Present",
-    jobTitle: "Full Stack Developer",
-    company: "Opitco Oy - Tampere",
+    date: "12.2024 - Present",
+    title: "Full Stack Developer",
+    organization: "Opitco Oy - Tampere",
     description:
       "Designed, developed, and maintained the Todo Groups web application. The platform is built to help teachers with classroom management while supporting student focus, engagement, and motivation during lessons.",
-    skills: [
-      "React",
-      "TypeScript",
-      "Node.js",
-      "PostgreSQL",
-      "SEO",
-      "AWS S3",
-    ],
+    tags: ["React", "TypeScript", "Node.js", "PostgreSQL", "SEO", "AWS S3"],
   },
   {
-    date: "9.2024 – 10.2024 (Project)",
-    jobTitle: "IT Support",
-    company: "Barona / Accountor - Tampere",
+    date: "9.2024 - 10.2024 (Project)",
+    title: "IT Support",
+    organization: "Barona / Accountor - Tampere",
     description:
       "Participated in supporting Accountor's new login system and helped customers through the authentication process.",
-    skills: ["IT Support", "Customer Support", "Problem Solving"],
+    tags: ["IT Support", "Customer Support", "Problem Solving"],
   },
   {
-    date: "10.2023 – 12.2023",
-    jobTitle: "IT Support",
-    company: "Teleperformance / Google - Athens",
+    date: "10.2023 - 12.2023",
+    title: "IT Support",
+    organization: "Teleperformance / Google - Athens",
     description:
       "Contributed to Google's customer service operations by resolving customer inquiries and issues related to Google products.",
-    skills: ["IT Support", "Customer Support", "Problem Solving"],
+    tags: ["IT Support", "Customer Support", "Problem Solving"],
   },
   {
-    date: "5.2024 – 8.2024 (Project)",
-    jobTitle: "Sales Specialist",
-    company: "Soldem / Telia - Tampere",
+    date: "5.2024 - 8.2024 (Project)",
+    title: "Sales Specialist",
+    organization: "Soldem / Telia - Tampere",
     description:
       "Worked in a target-driven sales role that strengthened my communication, customer-facing confidence, and ability to understand needs and discuss solutions clearly.",
-    skills: ["Sales", "Communication", "Customer Service"],
-    isHidden: true,
+    tags: ["Sales", "Communication", "Customer Service"],
+    isSecondary: true,
   },
 ] as const;
 
@@ -77,10 +57,10 @@ const Experience: React.FC = () => {
       return JOBS;
     }
 
-    return JOBS.filter((job) => !job.isHidden);
+    return JOBS.filter((job) => !job.isSecondary);
   }, [showAllJobs]);
 
-  const hasHiddenJobs = JOBS.some((job) => job.isHidden);
+  const hasSecondaryJobs = JOBS.some((job) => job.isSecondary);
 
   function handleLoadMore(): void {
     setShowAllJobs(true);
@@ -93,19 +73,19 @@ const Experience: React.FC = () => {
 
         <div className={styles.experienceContainer}>
           {visibleJobs.map((job) => (
-            <ExperienceCard
-              key={`${job.company}-${job.jobTitle}-${job.date}`}
+            <ResumeEntryCard
+              key={`${job.organization}-${job.title}-${job.date}`}
               date={job.date}
-              jobTitle={job.jobTitle}
-              company={job.company}
+              title={job.title}
+              organization={job.organization}
               description={job.description}
-              skills={job.skills}
-              isHidden={job.isHidden}
+              tags={job.tags}
+              isSecondary={job.isSecondary}
             />
           ))}
         </div>
 
-        {!showAllJobs && hasHiddenJobs && (
+        {!showAllJobs && hasSecondaryJobs && (
           <div className={styles.actions}>
             <button
               type="button"

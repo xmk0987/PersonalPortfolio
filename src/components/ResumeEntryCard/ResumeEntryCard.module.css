@@ -1,16 +1,21 @@
 .container {
   display: grid;
   grid-template-columns: minmax(180px, 220px) minmax(0, 1fr);
-  gap: var(--space-md);
+  gap: var(--space-xl);
   width: 100%;
-  padding: var(--space-md);
+  padding: var(--space-lg);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-xl);
   background: var(--color-foreground);
   box-shadow: var(--shadow-sm);
 }
 
-.containerHidden {
+.containerStacked {
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+.containerSecondary {
   border-color: rgba(255, 255, 255, 0.12);
   background: rgba(255, 255, 255, 0.015);
 }
@@ -27,7 +32,7 @@
   color: var(--color-text-muted);
 }
 
-.jobTitle {
+.title {
   margin: 0;
   font-size: var(--font-size-lg);
   font-weight: 700;
@@ -35,7 +40,7 @@
   line-height: var(--line-height-tight);
 }
 
-.company {
+.organization {
   font-size: var(--font-size-sm);
   color: var(--color-text-secondary);
 }
@@ -52,7 +57,7 @@
   color: var(--color-text-secondary);
 }
 
-.skills {
+.tags {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-sm);
@@ -61,5 +66,6 @@
 @media (max-width: 959px) {
   .container {
     grid-template-columns: 1fr;
+    gap: var(--space-lg);
   }
 }
