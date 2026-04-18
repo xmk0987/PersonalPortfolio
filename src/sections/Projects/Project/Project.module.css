@@ -5,7 +5,7 @@
   gap: var(--space-2xl);
   width: 100%;
   padding: var(--space-xl);
-  border: 1px solid var(--color-border);
+  border: var(--border-base);
   border-radius: var(--radius-xl);
   background: var(--color-foreground);
   box-shadow: var(--shadow-md);
@@ -35,7 +35,7 @@
 /* LEFT */
 .imageWrapper {
   overflow: hidden;
-  border: 1px solid var(--color-border);
+  border: var(--border-base);
   border-radius: var(--radius-lg);
   margin-bottom: var(--space-md);
 }
@@ -130,7 +130,7 @@
   justify-content: center;
   min-height: 44px;
   padding: 0.85rem 1.2rem;
-  border: 1px solid var(--color-border);
+  border: var(--border-base);
   border-radius: var(--radius-full);
   background: var(--color-bg);
   color: var(--color-text-primary);

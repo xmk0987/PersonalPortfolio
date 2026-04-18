@@ -1,6 +1,6 @@
 .pageSection {
   width: 100%;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: var(--border-base);
   padding: var(--padding-section-y) var(--padding-section-x);
   display: flex;
   align-items: center;

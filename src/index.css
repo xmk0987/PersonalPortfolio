@@ -2,21 +2,14 @@
   /* Colors */
   --color-bg: #131313;
   --color-foreground: #1b1b1b;
-  --color-surface: #1b1b1b;
   --color-text-primary: #f3f7fb;
   --color-text-secondary: #b8bec6;
   --color-text-muted: #8d949c;
   --color-accent: #b30039;
   --color-accent-hover: #cc0040;
   --color-border: #2e2e2e;
-  --color-chip-success: #1e832a;
-  --color-chip-warning: #afa62a;
 
-  /* RGB helpers for overlays/shadows if needed later */
-  --color-bg-rgb: 19, 19, 19;
-  --color-foreground-rgb: 27, 27, 27;
   --color-accent-rgb: 179, 0, 57;
-  --color-text-primary-rgb: 243, 247, 251;
 
   /* Typography */
   --font-family-base:
@@ -26,15 +19,10 @@
   --font-family-mono:
     "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
 
-  --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
   --font-size-base: 1rem;
   --font-size-md: 1.125rem;
   --font-size-lg: 1.25rem;
-  --font-size-xl: 1.5rem;
-  --font-size-2xl: 2rem;
-  --font-size-3xl: 3rem;
-  --font-size-4xl: 4rem;
 
   --line-height-tight: 1.15;
   --line-height-base: 1.5;
@@ -42,14 +30,9 @@
 
   /* Layout */
   --container-width: 1200px;
-  --container-width-wide: 1400px;
   --header-height: 72px;
-  --section-min-height: 100svh;
 
-  --header-height: 72px;
-  --page-padding-x: 24px;
-  --page-max-width: 1200px;
-
+  
   /* Spacing */
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
@@ -61,13 +44,10 @@
   /* Common paddings */
   --padding-section-y: var(--space-lg);
   --padding-section-x: var(--space-md);
-  --padding-card: var(--space-sm);
 
-  --padding-button-sm: 6px 12px;
   --padding-button-l: 10px 24px;
 
   /* Radius */
-  --radius-xs: 0.375rem;
   --radius-sm: 0.5rem;
   --radius-md: 0.75rem;
   --radius-lg: 1rem;
@@ -88,13 +68,11 @@
   /* Shadows */
   --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.18);
   --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.22);
-  --shadow-lg: 0 18px 50px rgba(0, 0, 0, 0.28);
   --shadow-focus: 0 0 0 4px rgba(var(--color-accent-rgb), 0.2);
 
   /* Motion */
   --transition-fast: 160ms ease;
   --transition-base: 220ms ease;
-  --transition-slow: 320ms ease;
 
   /* Global */
   color-scheme: dark;
