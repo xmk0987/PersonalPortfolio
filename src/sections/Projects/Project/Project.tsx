@@ -1,3 +1,4 @@
+import Chip from "../../../components/Chip/Chip";
 import styles from "./Project.module.css";
 
 export type ProjectVariant = "todogroups";
@@ -58,9 +59,7 @@ const Project: React.FC<ProjectProps> = ({
 
         <div className={styles.skills}>
           {skills.map((skill) => (
-            <span key={skill} className={styles.skillChip}>
-              {skill}
-            </span>
+            <Chip label={skill} key={`${skill}-chip`} />
           ))}
         </div>
 
