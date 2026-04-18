@@ -32,7 +32,6 @@
   --container-width: 1200px;
   --header-height: 72px;
 
-  
   /* Spacing */
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
@@ -42,7 +41,7 @@
   --space-2xl: 3rem;
 
   /* Common paddings */
-  --padding-section-y: var(--space-lg);
+  --padding-section-y: var(--space-2xl);
   --padding-section-x: var(--space-md);
 
   --padding-button-l: 10px 24px;
