@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
         <div className={styles.content}>
           <p className={styles.eyebrow}>Full Stack Developer</p>
 
-          <h1 className={styles.title}>Hi, I&apos;m Onni!</h1>
+          <h1 className={styles.title}>Hey, I&apos;m Onni!</h1>
 
           <p className={styles.description}>
             I build modern web applications with clean structure, thoughtful UX,

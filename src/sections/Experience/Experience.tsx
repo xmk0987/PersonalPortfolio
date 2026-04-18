@@ -29,6 +29,7 @@ const JOBS: readonly ResumeEntryCardProps[] = [
     description:
       "Participated in supporting Accountor's new login system and helped customers through the authentication process.",
     tags: ["IT Support", "Customer Support", "Problem Solving"],
+    isSecondary: true,
   },
   {
     date: "10.2023 - 12.2023",
@@ -37,6 +38,7 @@ const JOBS: readonly ResumeEntryCardProps[] = [
     description:
       "Contributed to Google's customer service operations by resolving customer inquiries and issues related to Google products.",
     tags: ["IT Support", "Customer Support", "Problem Solving"],
+    isSecondary: true,
   },
   {
     date: "5.2024 - 8.2024 (Project)",
@@ -89,7 +91,7 @@ const Experience: React.FC = () => {
           <div className={styles.actions}>
             <button
               type="button"
-              className={styles.loadMoreButton}
+              className="secondaryButton"
               onClick={handleLoadMore}
             >
               Load more

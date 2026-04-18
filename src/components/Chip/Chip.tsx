@@ -1,5 +1,5 @@
 import styles from "./Chip.module.css";
-import { CHIP_VARIANTS } from "../../constants/chipVariants";
+import { CHIP_VARIANTS } from "./chipVariants";
 
 type ChipVariant = keyof typeof CHIP_VARIANTS;
 

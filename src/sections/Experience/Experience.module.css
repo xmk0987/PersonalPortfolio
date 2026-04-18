@@ -14,28 +14,3 @@
   display: flex;
   justify-content: center;
 }
-
-.loadMoreButton {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 44px;
-  padding: 0.85rem 1.25rem;
-  border: var(--border-base);
-  border-radius: var(--radius-full);
-  background: var(--color-foreground);
-  color: var(--color-text-primary);
-  font-weight: 600;
-  transition:
-    border-color var(--transition-fast),
-    background-color var(--transition-fast),
-    transform var(--transition-fast);
-}
-
-.loadMoreButton:hover {
-  border-color: var(--color-accent);
-}
-
-.loadMoreButton:active {
-  transform: translateY(1px);
-}

@@ -19,8 +19,6 @@ const MobileDropdownNavbar: React.FC<MobileDropdownNavbarProps> = ({
       aria-hidden={!isOpen}
     >
       {NAV_ITEMS.map((item) => {
-        const Icon = item.icon;
-
         return (
           <a
             key={item.href}
@@ -28,11 +26,6 @@ const MobileDropdownNavbar: React.FC<MobileDropdownNavbarProps> = ({
             onClick={onNavigate}
             className={styles["mobile-dropdown-navbar__link"]}
           >
-            <Icon
-              size={20}
-              title={item.label}
-              className={styles["mobile-dropdown-navbar__icon"]}
-            />
             <span>{item.label}</span>
           </a>
         );

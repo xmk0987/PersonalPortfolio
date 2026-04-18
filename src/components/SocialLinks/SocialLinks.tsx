@@ -1,16 +1,15 @@
 import { GitHubIcon, LinkedInIcon } from "../../assets/icons";
 import styles from "./SocialLinks.module.css";
 
-// TODO UPDATE TO REAL LINKS
 const SOCIAL_LINKS = [
   {
     label: "GitHub",
-    href: "https://github.com/yourusername",
+    href: "https://github.com/xmk0987",
     Icon: GitHubIcon,
   },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com/in/yourusername",
+    href: "https://www.linkedin.com/in/onni-vitikainen-a9a57a16b/",
     Icon: LinkedInIcon,
   },
 ] as const;

@@ -5,45 +5,6 @@
   flex-wrap: wrap;
 }
 
-.primaryButton,
-.secondaryButton {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--padding-button-l);
-  border-radius: var(--radius-full);
-  font-weight: 600;
-  transition:
-    background-color var(--transition-base),
-    border-color var(--transition-base),
-    transform var(--transition-fast);
-}
-
-.primaryButton {
-  background: var(--color-accent);
-  border: 1px solid var(--color-accent);
-  color: var(--color-text-primary);
-}
-
-.primaryButton:hover {
-  background: var(--color-accent-hover);
-}
-
-.secondaryButton {
-  background: var(--color-foreground);
-  border: var(--border-base);
-  color: var(--color-text-primary);
-}
-
-.secondaryButton:hover {
-  border-color: var(--color-accent);
-}
-
-.primaryButton:active,
-.secondaryButton:active {
-  transform: translateY(1px);
-}
-
 @media (max-width: 639px) {
   .actions {
     width: 100%;
@@ -51,8 +12,7 @@
     align-items: stretch;
   }
 
-  .primaryButton,
-  .secondaryButton {
+  .actions button {
     width: 100%;
   }
 }

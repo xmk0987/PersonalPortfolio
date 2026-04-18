@@ -67,10 +67,10 @@ const Projects: React.FC = () => {
   }
 
   return (
-    <PageSection id="projects" className={styles.projectSection}>
+    <PageSection id="projects">
       <div className={styles.sectionInner}>
         <div className={styles.header}>
-          <h2 className={styles.sectionTitle}>Projects</h2>
+          <h2>Projects</h2>
           <SocialLinks visibleLabels={["GitHub"]} />
         </div>
 

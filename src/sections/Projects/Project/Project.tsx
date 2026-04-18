@@ -66,7 +66,7 @@ const Project: React.FC<ProjectProps> = ({
         <div className={styles.actions}>
           <button
             type="button"
-            className={styles.nextProjectButton}
+            className={`${styles.nextProjectButton} primaryButton`}
             onClick={onNextProjectClick}
           >
             {nextProjectLabel}

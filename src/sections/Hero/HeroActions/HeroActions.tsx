@@ -3,11 +3,11 @@ import styles from "./HeroActions.module.css";
 const HeroActions: React.FC = () => {
   return (
     <div className={styles.actions}>
-      <a href="#projects" className={styles.primaryButton}>
+      <a href="#projects" className="primaryButton">
         Show Projects
       </a>
 
-      <a href="#about" className={styles.secondaryButton}>
+      <a href="#about" className="secondaryButton">
         About Me
       </a>
     </div>

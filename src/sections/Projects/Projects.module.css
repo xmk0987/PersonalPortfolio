@@ -1,7 +1,3 @@
-.projectSection {
-  background: var(--color-bg);
-}
-
 .sectionInner {
   display: flex;
   flex-direction: column;
