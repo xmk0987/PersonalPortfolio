@@ -208,39 +208,3 @@ a {
   background: rgba(var(--color-accent-rgb), 0.35);
   color: var(--color-text-primary);
 }
-
-/* App root */
-#root {
-  min-height: 100svh;
-  background-color: var(--color-bg);
-}
-
-.card {
-  background-color: var(--color-foreground);
-  border: var(--border-base);
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-sm);
-}
-
-.chip {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--gap-xs);
-  padding: 0.4rem 0.75rem;
-  border-radius: var(--radius-full);
-  font-size: var(--font-size-sm);
-  font-weight: 600;
-  line-height: 1;
-}
-
-.chip--success {
-  background-color: rgba(30, 131, 42, 0.14);
-  color: #7ee08a;
-  border: 1px solid rgba(30, 131, 42, 0.35);
-}
-
-.chip--warning {
-  background-color: rgba(175, 166, 42, 0.14);
-  color: #e5dd77;
-  border: 1px solid rgba(175, 166, 42, 0.35);
-}

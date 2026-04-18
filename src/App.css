@@ -1,3 +1,8 @@
+#root {
+  min-height: 100svh;
+  background-color: var(--color-bg);
+}
+
 body {
   min-width: 320px;
   min-height: 100svh;
@@ -46,6 +51,17 @@ h4 {
   font-size: 1.25rem;
 }
 
+h1:after,
+h2:after {
+  content: "";
+  display: block;
+  width: 56px;
+  margin-top: var(--space-xs);
+  border-radius: var(--radius-full);
+  background-color: var(--color-accent);
+  height: 4px;
+}
+
 p,
 li {
   color: var(--color-text-secondary);
@@ -59,4 +75,34 @@ small {
 strong {
   color: var(--color-text-primary);
   font-weight: 600;
+}
+
+.card {
+  background-color: var(--color-foreground);
+  border: var(--border-base);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gap-xs);
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  line-height: 1;
+}
+
+.chip--success {
+  background-color: rgba(30, 131, 42, 0.14);
+  color: #7ee08a;
+  border: 1px solid rgba(30, 131, 42, 0.35);
+}
+
+.chip--warning {
+  background-color: rgba(175, 166, 42, 0.14);
+  color: #e5dd77;
+  border: 1px solid rgba(175, 166, 42, 0.35);
 }
