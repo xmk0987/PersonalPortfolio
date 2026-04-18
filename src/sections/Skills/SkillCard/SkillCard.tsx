@@ -1,6 +1,6 @@
 import Chip from "../../../components/Chip/Chip";
 import styles from "./SkillCard.module.css";
-import type { SkillCategory, SkillLevel } from "../skills";
+import type { SkillCategory, SkillLevel } from "../skills-utils";
 
 interface SkillCardProps {
   title: SkillCategory["title"];

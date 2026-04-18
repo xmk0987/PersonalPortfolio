@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 import PageSection from "../../layout/PageSection";
 import Chip from "../../components/Chip/Chip";
 import SkillCard from "./SkillCard/SkillCard";
-import { SKILL_CATEGORIES } from "./skills";
+import { SKILL_CATEGORIES } from "./skills-utils";
 import styles from "./Skills.module.css";
 
 const Skills: React.FC = () => {
